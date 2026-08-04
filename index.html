@@ -2,62 +2,37 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Repo-Site</title>
-
     <meta name="description" content="Turn any GitHub repository into a clean project webpage.">
-
     <meta name="robots" content="index, follow">
-
     <meta property="og:title" content="Repo-Site">
-
     <meta property="og:description" content="Turn any GitHub repository into a clean project webpage.">
-
     <meta property="og:type" content="website">
-
     <link rel="icon" href="/assets/favicon.svg">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
-
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
 
 <body>
-
     <div id="app">
-
         <main class="home">
-
             <h1>Repo-Site</h1>
-
             <p>
                 Turn any GitHub repository into a clean project webpage.
             </p>
-
             <form id="repo-form">
-
                 <input id="repo-input" type="text" placeholder="https://github.com/owner/repository or owner/repository"
                     autocomplete="off" spellcheck="false">
-
                 <button id="submit-button" type="submit">
                     Open
                 </button>
-
             </form>
-
             <p id="status" hidden></p>
-
         </main>
-
     </div>
-
     <script type="module" src="/js/app.js"></script>
-
 </body>
 
 </html>

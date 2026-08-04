@@ -15,11 +15,6 @@ export async function fetchReadme(repository) {
         }
     );
 
-    // if (!response.ok) {
-    //     // throw new Error(response.statusText);
-    //     throw new Error(response.status);
-    // }
-
     if (response.status === 404) {
         throw new Error(ERROR_MESSAGES.NOT_FOUND);
     }
