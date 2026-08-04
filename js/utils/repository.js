@@ -9,9 +9,17 @@ export function getRepositoryFromPath() {
 
 export function normalizeRepository(value) {
 
+    try {
+        const url = new URL(value);
+
+        if (url.hostname === "github.com") {
+            value = url.pathname;
+        }
+
+    } catch { }
+
     return value
         .trim()
-        .replace(/^https?:\/\/github\.com\//i, "")
         .replace(/^\/+|\/+$/g, "");
 
 }

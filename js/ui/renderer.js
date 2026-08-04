@@ -1,6 +1,6 @@
 import { APP_NAME } from "../constants.js";
 
-
+const button = document.getElementById("submit-button");
 const app = document.getElementById("app");
 const status = document.getElementById("status");
 
@@ -28,4 +28,8 @@ export function setTitle(repository = "") {
         ? `${repository} · ${APP_NAME}`
         : APP_NAME;
 
+}
+
+export function setLoading(isLoading) {
+    button.disabled = isLoading;
 }

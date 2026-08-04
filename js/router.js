@@ -1,5 +1,4 @@
 import { state } from "./state.js";
-
 import { fetchReadme } from "./services/github.js";
 
 import {
@@ -11,16 +10,24 @@ import {
 
 import {
     renderReadme,
+    setLoading,
     setStatus,
     setTitle
 } from "./ui/renderer.js";
 
+import {
+    STATUS_MESSAGES
+} from "./constants.js";
 
-export function initRouter() {
+
+export async function initRouter() {
 
     const form = document.getElementById("repo-form");
     const input = document.getElementById("repo-input");
 
+    if (input) {
+        input.focus();
+    }
 
     form.addEventListener("submit", async event => {
 
@@ -56,7 +63,7 @@ export function initRouter() {
     const repository = getRepositoryFromPath();
 
     if (repository) {
-        loadRepository(repository);
+        await loadRepository(repository);
     }
 
 }
@@ -87,8 +94,8 @@ async function openRepository(repository) {
 
 
 async function loadRepository(repository) {
-
-    setStatus(`Loading ${repository}...`);
+    setStatus(STATUS_MESSAGES.loading(repository));
+    setLoading(true);
 
     try {
 
@@ -104,15 +111,14 @@ async function loadRepository(repository) {
 
         return true;
 
-    }
+    } catch (error) {
 
-    catch (error) {
-        // console.error(error);
-
-        setStatus("Repository not found.");
+        setStatus(error.message);
 
         return false;
 
+    } finally {
+        setLoading(false);
     }
 
 }
