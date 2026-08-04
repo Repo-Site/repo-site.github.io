@@ -5,7 +5,6 @@ import {
 
 
 export async function fetchReadme(repository) {
-
     const response = await fetch(
         `${GITHUB_API_BASE_URL}/${repository}/readme`,
         {
@@ -28,5 +27,4 @@ export async function fetchReadme(repository) {
     }
 
     return response.text();
-
 }

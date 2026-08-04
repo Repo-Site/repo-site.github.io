@@ -42,3 +42,7 @@ body {
     padding: 12px 24px;
     cursor: pointer;
 }
+
+svg.octicon.octicon-link {
+    display: none;
+}

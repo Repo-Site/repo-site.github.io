@@ -1,13 +1,10 @@
 export function getRepositoryFromPath() {
-
     return normalizeRepository(
         decodeURIComponent(location.pathname)
     );
-
 }
 
 export function normalizeRepository(value) {
-
     try {
         const url = new URL(value);
         if (url.hostname === "github.com") {
@@ -15,9 +12,7 @@ export function normalizeRepository(value) {
         }
     } catch { }
 
-    return value
-        .trim()
-        .replace(/^\/+|\/+$/g, "");
+    return value.trim().replace(/^\/+|\/+$/g, "");
 }
 
 export function isValidRepository(repository) {
