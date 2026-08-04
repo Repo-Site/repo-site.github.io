@@ -7,7 +7,6 @@ A simple GitHub README viewer that turns any public repository into a clean webp
 ### 🌐 https://repo-site.github.io/
 
 </div>
-</div>
 
 ## Features
 
@@ -44,7 +43,16 @@ https://repo-site.github.io/owner/repository
 ├── css/
 │   └── style.css
 ├── js/
-│   └── app.js
+│   ├── app.js
+│   ├── constants.js
+│   ├── state.js
+│   ├── router.js
+│   ├── services/
+│   │   └── github.js
+│   ├── ui/
+│   │   └── renderer.js
+│   └── utils/
+│       └── repository.js
 ├── 404.html
 ├── index.html
 └── README.md
