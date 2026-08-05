@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="10 10 44 44"
+     fill="none">
+
+  <defs>
+    <linearGradient id="flow" x1="12" y1="32" x2="52" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2DA44E"/>
+      <stop offset="55%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main Flow -->
+  <path
+    d="M16 48V20a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H32a4 4 0 0 1-4-4v-8a4 4 0 0 0-4-4h-8"
+    stroke="url(#flow)"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Git Node -->
+  <circle
+    cx="16"
+    cy="46"
+    r="4"
+    fill="white"
+    stroke="#3FB950"
+    stroke-width="3"/>
+
+  <!-- Web Globe -->
+  <g
+      stroke="#8B5CF6"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+
+      <!-- Outer -->
+      <circle cx="36" cy="29" r="7"/>
+
+      <!-- Equator -->
+      <path d="M30 29H42"/>
+
+      <!-- Prime Meridian -->
+      <path d="M36 23V35"/>
+
+      <!-- Left Longitude -->
+      <path d="M34 23 C32 25.5 32 32.5 34 35"/>
+
+      <!-- Right Longitude -->
+      <path d="M38 23 C40 25.5 40 32.5 38 35"/>
+  </g>
+
+</svg>
